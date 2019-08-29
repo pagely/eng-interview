@@ -1,0 +1,11 @@
+{
+    "name": "pagely/eng-interview",
+    "description": "Interview Questions",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Pagely\\Interview\\": "src/"
+        }
+    },
+    "require": {}
+}
