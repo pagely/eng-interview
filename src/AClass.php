@@ -8,16 +8,16 @@ class AClass
 {
     public $db;
 
-    public function addProduct(Product $thingOne, $values)
+    public function addProducts(Product $thingOne, $products)
     {
         $data = array();
 
-        $this->data->values[] = $values;
+        $this->data->values = $products;
 
         if ($this->method = 'POST' && in_array('price', array_keys($data))) {
-            $type = $values['type'];
-            $price = $values['price'];
-            $productName = $values['name'];
+            $type = $products[0]['type'];
+            $price = $products[0]['price'];
+            $productName = $products[0]['name'];
         }
 
         foreach ($this->data->values as $set) {
