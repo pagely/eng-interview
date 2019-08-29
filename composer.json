@@ -7,5 +7,7 @@
             "Pagely\\Interview\\": "src/"
         }
     },
-    "require": {}
+    "require": {
+        "equip/data": "^2.4"
+    }
 }
