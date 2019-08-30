@@ -49,3 +49,11 @@ class AClass
         return $thingOne;
     }
 }
+
+$instance = new AClass();
+$instance->addProducts(new Product, [
+  ['type' => 'foo', 'name' => 'bar', 'price' => 1300],
+  ['type' => 'foo', 'name' => 'bar', 'price' => 100],
+  ['type' => 'foo', 'name' => 'bar', 'price' => 200],
+  ['type' => 'foo', 'name' => 'bar', 'price' => 50],
+]);
