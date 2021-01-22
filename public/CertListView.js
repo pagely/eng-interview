@@ -10,9 +10,11 @@ import PropTypes from 'prop-types';
   Perform actions with the list such as
   * Create a new certificate
   * upload new certificate
+  * Filter by certificate active status
 */
 
 const certificatePropTypes = {
+  active: PropTypes.bool,
   activeCount: PropTypes.number.isRequired,
   alternateNames: PropTypes.array.isRequired,
   certType: PropTypes.string.isRequired,
