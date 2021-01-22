@@ -12,11 +12,7 @@ import PropTypes from 'prop-types';
   * upload new certificate
 */
 
-const Certificate = () = {
-  return ();
-}
-
-Certificate.propTypes = {
+const certificatePropTypes = {
   activeCount: PropTypes.number.isRequired,
   alternateNames: PropTypes.array.isRequired,
   certType: PropTypes.string.isRequired,
