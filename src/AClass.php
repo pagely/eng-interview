@@ -6,9 +6,14 @@ namespace Pagely\Interview;
 
 class AClass
 {
-    public $db;
+    public \PDO $db;
 
-    public function addProducts(Product $thingOne, $products)
+    /**
+     * Add products to the database and return the total price of all new products
+     * @param array $products
+     * @return int total price
+     */
+    public function addProducts(Product $thingOne, $products): int
     {
         $data = array();
 
