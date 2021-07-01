@@ -27,6 +27,26 @@ use Pagely\ApiFramework\InputDefinition\Security\AdminOrAccountuserTrait;
  *     path="/analytics/accounts/{accountId}/server-cpu",
  *     method="GET",
  *     contentType="application/json",
+ *     queryParameters={
+ *         @Input\Parameter(
+ *             name="id",
+ *             description="Server IDs",
+ *             required=false,
+ *             type="array",
+ *             sample="[37,12]",
+ *             parameter=@Input\Parameter(
+ *                 type="int",
+ *                 sample=2,
+ *                 validators={
+ *                     @Input\Validation(type="Numeric"),
+ *                     @Input\Validation(type="NotEmpty"),
+ *                 },
+ *             ),
+ *             validators={
+ *                 @Input\Validation(type="ArrayVal")
+ *             },
+ *         ),
+ *     }
  * )
  */
 class CPUInputDefinition implements EntityInterface, ActionInputInterface, AccountPermissionInputInterface, ColumnsProvider
@@ -43,7 +63,6 @@ class CPUInputDefinition implements EntityInterface, ActionInputInterface, Accou
     use StatsEndpointInputTrait;
     use StatsDataEndpointInputTrait;
 
-    use ServerIdsTrait;
     use ServerNamesTrait;
     use ServerTypesTrait;
 }
